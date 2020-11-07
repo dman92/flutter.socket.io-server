@@ -29,7 +29,7 @@ io.on('connection', client => {
     client.on('vote-band', (payload) => {
         
         bands.voteBand( payload.id );
-        io.emit('active-bands', bands.getBands());
+        io.emit('active-bands',bands.getBands());
     })
 
     client.on('add-band', (payload) => {
