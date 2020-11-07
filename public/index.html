@@ -23,8 +23,13 @@
 
         socket.emit('mensaje', {nombre:'David'})
 
-        socket.on('mensaje', function(payload){
+        socket.on('nuevo-mensaje', function(payload){
             console.log("Escuchando desde cliente", payload)
+        })
+
+        socket.on('active-bands', function(payload){
+            console.clear();
+            console.table(payload)
         })
 
     </script>
